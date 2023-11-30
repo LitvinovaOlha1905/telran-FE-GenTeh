@@ -7,6 +7,7 @@
 
    WHERE CategoryID = 4
    ORDER BY Price DESC
+   LIMIT 1
 
 -- 2. Вывести страны поставщиков, кроме поставщика 1.
 
