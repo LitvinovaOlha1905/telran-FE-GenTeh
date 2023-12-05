@@ -4,8 +4,8 @@
 
 SELECT 
 Products.ProductName,
-Products.Price AS Price_USD
-
+Products.Price AS Price_EUR,
+Products.Price * 1.0709 AS Price_USD
 FROM Products
 
 ORDER BY Price DESC
@@ -13,10 +13,10 @@ LIMIT 1;
 
 -- Задача 2. Вывести два самых дорогих товара из категории Beverages из USA
 
-SELECT *
-FROM Products
+SELECT * 
+FROM Categories
 
-JOIN Categories ON Categories.CategoryID = Products.CategoryID
+JOIN Products ON Categories.CategoryID = Products.CategoryID
 JOIN Suppliers ON Suppliers.SupplierID = Products.SupplierID
 
 WHERE Suppliers.Country = 'USA' AND  Categories.CategoryName = 'Beverages'
