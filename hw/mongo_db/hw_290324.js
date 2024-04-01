@@ -1,4 +1,6 @@
 // 1. Создайте пустую коллекцию students.
+db.createCollection("students");
+
 // 2. Заполните ее данными о студентах.
 
 db.students.insertMany([
